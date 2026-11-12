@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Chloé Di Pasquale">
+<meta property="og:description" content="Chargée de projet, communication et événementiel. Parcours, compétences et contact.">
+<meta property="og:image" content="img/portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23fff'%3ECD%3C/text%3E%3C/svg%3E">
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Chloé Di Pasquale</title>
+<meta name="description" content="Chloé Di Pasquale. Gestion de projet, communication, événementiel, éthique animale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Manrope:wght@400..800&display=swap">
+<style>
+/* ==========================================================================
+   DIRECTION : site portfolio éditorial, sections marine / blanc en alternance.
+   Bleu marine profond, blanc, bleu ciel pâle pour les accents.
+   (Variante bordeaux : --night #4A0F1E, --night-2 #5E1628, --sky #E3B5BE,
+    --stone-2 #F1E6E8, --muted #6E5258, --rule-l rgba(74,15,30,.14))
+   Typo : Fraunces (titres, très grands, italique pour l'émotion) + Manrope.
+   Thème unique assumé (pas de bascule clair/sombre) : chaque section fixe
+   ses couleurs explicitement.
+   ========================================================================== */
+:root {
+  --night:   #0B1F3A;   /* bleu marine */
+  --night-2: #132A4D;   /* marine plus clair (cartes) */
+  --stone:   #FFFFFF;   /* blanc */
+  --stone-2: #EDF1F7;   /* blanc bleuté (fond compétences) */
+  --ink:     #0B1F3A;   /* texte sur blanc = marine */
+  --accent:  #FFFFFF;   /* accent sur fond marine */
+  --sky:     #A9C1E2;   /* bleu ciel pâle : italiques, détails */
+  --sage:    #B7C6DC;   /* texte secondaire sur marine */
+  --muted:   #4D5F7C;   /* texte secondaire sur blanc */
+  --rule-d:  rgba(255,255,255,.16);
+  --rule-l:  rgba(11,31,58,.14);
+
+  --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans:  "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --maxw: 1320px;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0; background: var(--night); color: var(--stone);
+  font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--night); }
+a { color: inherit; text-decoration: none; }
+img { height: auto; max-width: 100%; }
+p, h1, h2, h3, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+::selection { background: var(--accent); color: var(--ink); }
+
+.wrap {
+  max-width: var(--maxw); margin: 0 auto;
+  padding-left: var(--gutter); padding-right: var(--gutter-r);
+}
+@media (min-width: 760px) {
+  :root { --gutter: max(40px, env(safe-area-inset-left, 0px)); --gutter-r: max(40px, env(safe-area-inset-right, 0px)); }
+}
+.kicker { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.light { background: var(--stone); color: var(--ink); }
+.light ::selection { background: var(--ink); color: var(--stone); }
+
+/* ---------- Intro (bonjour multilingue) ---------- */
+.intro {
+  position: fixed; inset: 0; z-index: 100; background: var(--accent); color: var(--ink);
+  display: grid; place-items: center; pointer-events: none;
+  transition: transform .8s cubic-bezier(.76,0,.24,1);
+}
+.intro.done { transform: translateY(-101%); }
+.intro span { font-family: var(--serif); font-style: italic; font-size: clamp(2.6rem, 9vw, 6rem); font-variation-settings: "opsz" 144, "SOFT" 100; }
+
+/* ---------- Curseur personnalisé (souris uniquement) ---------- */
+.cursor {
+  position: fixed; left: 0; top: 0; z-index: 90; width: 12px; height: 12px; margin: -6px 0 0 -6px;
+  border-radius: 50%; background: var(--accent); pointer-events: none; mix-blend-mode: difference;
+  transition: width .25s, height .25s, margin .25s; display: none;
+}
+.cursor.big { width: 64px; height: 64px; margin: -32px 0 0 -32px; }
+@media (hover: hover) and (pointer: fine) { .cursor { display: block; } }
+
+/* ---------- Barre de progression + navigation ---------- */
+.progress { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; height: 2px; width: 100%; z-index: 70; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); }
+.nav {
+  position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 50;
+  padding-block: 16px; color: #fff; background: var(--night);
+  border-bottom: 1px solid var(--rule-d);
+}
+.nav .wrap { display: flex; align-items: center; gap: 24px; }
+.logo { font-family: var(--serif); font-size: 1.25rem; font-style: italic; font-variation-settings: "opsz" 40; }
+.menu { display: none; gap: 24px; margin-left: auto; font-size: .9rem; font-weight: 600; }
+.menu a { position: relative; }
+.menu a::after { content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .35s; }
+.menu a:hover::after { transform: scaleX(1); transform-origin: left; }
+.menu .nav-cta { padding: 7px 16px; margin: -7px 0; border-radius: 999px; background: #fff; color: var(--ink); }
+.menu .nav-cta::after { display: none; }
+.burger { margin-left: auto; background: none; border: 0; color: inherit; font: 700 .9rem var(--sans); cursor: pointer; padding: 8px 0; }
+@media (min-width: 1100px) { .menu { display: flex; } .burger { display: none; } }
+.overlay {
+  position: fixed; inset: 0; z-index: 80; background: var(--accent); color: var(--ink);
+  padding: calc(env(safe-area-inset-top, 0px) + 80px) var(--gutter-r) 40px var(--gutter);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.overlay[hidden] { display: none; }
+.overlay a { font-family: var(--serif); font-size: clamp(2.4rem, 11vw, 4rem); line-height: 1.1; }
+.overlay button { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 18px); right: var(--gutter-r); background: none; border: 0; font: 700 .9rem var(--sans); color: var(--ink); cursor: pointer; padding: 8px 0; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding-top: calc(env(safe-area-inset-top, 0px) + 110px); padding-bottom: 56px; overflow: hidden; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--sage); font-size: .9rem; margin-bottom: 28px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: middle; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.55); } 50% { box-shadow: 0 0 0 7px rgba(255,255,255,0); } }
+.hero-grid { display: grid; grid-template-areas: "meta" "name" "photo" "bottom"; gap: 28px; }
+@media (min-width: 1000px) {
+  .hero-grid { grid-template-columns: 1.55fr 1fr; grid-template-areas: "meta photo" "name photo" "bottom photo"; column-gap: 56px; row-gap: 30px; align-items: start; }
+}
+.hero-meta { grid-area: meta; margin-bottom: 0 !important; }
+.hero-photo { grid-area: photo; margin: 0; position: relative; }
+.hero-photo img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; border-radius: 4px; }
+@media (min-width: 1000px) { .hero-photo img { aspect-ratio: 3/4; } }
+.hero-photo figcaption { position: absolute; left: 14px; bottom: 12px; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+.name-block { grid-area: name; display: grid; gap: 18px; }
+.role { font-size: clamp(1.05rem, 1.6vw, 1.25rem); font-weight: 600; color: #fff; letter-spacing: .01em; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; padding: 14px 22px; border-radius: 999px; font-weight: 700; font-size: .95rem; border: 1px solid var(--rule-d); transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { border-color: #fff; }
+.btn.solid { background: #fff; color: var(--ink); border-color: #fff; }
+.btn.solid:hover { background: var(--sky); border-color: var(--sky); }
+.name {
+  font-size: clamp(3.2rem, 14vw, 9.6rem); line-height: .88; letter-spacing: -.035em;
+  font-variation-settings: "opsz" 144, "SOFT" 30; font-weight: 380;
+}
+.name .line { display: block; }
+.name em { font-style: italic; font-weight: 300; color: var(--sky); font-variation-settings: "opsz" 144, "SOFT" 100; }
+.name .indent { padding-left: 7vw; }
+@media (min-width: 1000px) { .name { font-size: clamp(4rem, 8.4vw, 9.6rem); } .name .indent { padding-left: 4vw; } }
+.hero-bottom { grid-area: bottom; display: grid; gap: 22px; }
+.hero-row { display: grid; gap: 24px; }
+.rotator { font-family: var(--serif); font-size: clamp(1.5rem, 3.4vw, 2.4rem); line-height: 1.2; font-variation-settings: "opsz" 72; }
+.rotator .slot { display: grid; overflow: hidden; }
+.rotator .slot span { grid-area: 1/1; font-style: italic; color: var(--sky); transition: transform .6s cubic-bezier(.7,0,.2,1), opacity .6s; }
+.rotator .slot span.out { transform: translateY(-110%); opacity: 0; }
+.rotator .slot span.in-wait { transform: translateY(110%); opacity: 0; }
+.hero-lede { color: var(--sage); max-width: 38ch; }
+.ring { width: 118px; height: 118px; flex: none; position: relative; }
+.ring svg { width: 100%; height: 100%; animation: spin 18s linear infinite; }
+.ring text { fill: var(--stone); font: 700 10.5px var(--sans); letter-spacing: 2px; text-transform: uppercase; }
+.ring .arrow { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.6rem; color: var(--accent); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Bandeau défilant ---------- */
+.marquee { background: #fff; color: var(--ink); overflow: hidden; padding-block: 18px; border-block: 1px solid var(--rule-l); }
+.marquee-track { display: flex; width: max-content; animation: slide 32s linear infinite; }
+.marquee span { font-family: var(--serif); font-size: clamp(1.5rem, 3.2vw, 2.4rem); white-space: nowrap; padding-right: 1.1em; font-variation-settings: "opsz" 72; }
+.marquee span i { font-style: italic; }
+.marquee span::after { content: "✳"; padding-left: 1.1em; font-style: normal; font-size: .7em; vertical-align: middle; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ---------- À propos ---------- */
+.about { padding-block: 110px; }
+.about-grid { display: grid; gap: 56px; }
+@media (min-width: 980px) { .about-grid { grid-template-columns: 1.55fr 1fr; gap: 80px; align-items: start; } }
+.about .kicker { color: var(--muted); margin-bottom: 26px; display: block; }
+.statement { font-size: clamp(1.7rem, 3.6vw, 2.9rem); line-height: 1.18; letter-spacing: -.012em; font-variation-settings: "opsz" 96, "SOFT" 40; }
+.statement .w { transition: opacity .2s; }
+.statement em { font-style: italic; }
+.arch {
+  aspect-ratio: 4/5; max-width: 100%; border-radius: 999px 999px 18px 18px; overflow: hidden; position: relative;
+  background: var(--night);
+}
+.arch svg, .arch img { width: 100%; height: 100%; display: block; object-fit: cover; }
+/* Pour mettre une photo : remplacer le <svg> dans .arch par <img src="..." alt="Chloé"> */
+.arch img { width: 100%; height: 100%; object-fit: cover; }
+.arch-cap { margin-top: 12px; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+.numbers { margin-top: 72px; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--rule-l); }
+@media (min-width: 760px) { .numbers { grid-template-columns: repeat(4, 1fr); } }
+.seek { margin-top: 64px; display: grid; gap: 22px; }
+@media (min-width: 980px) { .seek { grid-template-columns: 1fr 3fr; gap: 64px; } }
+.seek h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.1; font-variation-settings: "opsz" 72; }
+.seek dl { margin: 0; display: grid; gap: 0; border-top: 1px solid var(--rule-l); }
+.seek dl div { display: grid; grid-template-columns: 1fr; gap: 4px 24px; padding-block: 16px; border-bottom: 1px solid var(--rule-l); }
+@media (min-width: 640px) { .seek dl div { grid-template-columns: 130px 1fr; } }
+.seek dt { font-weight: 700; }
+.seek dd { margin: 0; color: var(--muted); }
+.numbers div { padding: 22px 16px 0 0; display: grid; gap: 4px; align-content: start; }
+.numbers b { font-family: var(--serif); font-weight: 400; font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1; font-variation-settings: "opsz" 144; font-variant-numeric: lining-nums; }
+.numbers span { font-size: .92rem; color: var(--muted); line-height: 1.4; max-width: 22ch; }
+
+/* ---------- Parcours (défilement horizontal sur grand écran) ---------- */
+.journey { position: relative; padding-block: 100px 40px; }
+.journey-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 40px; margin-bottom: 48px; }
+.journey-head h2, .sec-title { font-size: clamp(2.8rem, 8vw, 7rem); line-height: .92; letter-spacing: -.03em; font-variation-settings: "opsz" 144, "SOFT" 30; }
+.journey-head h2 em, .sec-title em { font-style: italic; color: var(--sky); font-weight: 300; }
+.light .sec-title em, .skills .sec-title em { color: var(--ink); }
+.journey-head p { color: var(--sage); max-width: 34ch; }
+.track { display: grid; gap: 18px; }
+.panel {
+  background: var(--night-2); border: 1px solid var(--rule-d); border-radius: 22px;
+  padding: 30px 26px; display: flex; flex-direction: column; gap: 18px; min-width: 0; position: relative; overflow: hidden;
+}
+.panel .year {
+  font-family: var(--serif); font-size: clamp(3.4rem, 7vw, 5.6rem); line-height: .9; letter-spacing: -.03em;
+  color: transparent; -webkit-text-stroke: 1px var(--sage); font-variation-settings: "opsz" 144; font-weight: 500;
+}
+.panel h3 { font-size: clamp(1.45rem, 2.2vw, 1.9rem); line-height: 1.12; font-variation-settings: "opsz" 48; }
+.panel .org { color: var(--sky); font-weight: 600; font-size: .95rem; }
+.panel ul { display: grid; gap: 9px; color: #D3DDEB; font-size: .98rem; }
+.panel li { padding-left: 18px; position: relative; }
+.panel li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1px; background: var(--accent); }
+.panel .type { display: block; text-transform: none !important; letter-spacing: 0 !important; font-weight: 600 !important; font-size: .9rem !important; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); }
+.panel.feature { background: var(--accent); color: var(--ink); border-color: var(--accent); }
+.panel.feature .year { -webkit-text-stroke-color: var(--ink); }
+.panel.feature .org, .panel.feature .type { color: var(--ink); }
+.panel.feature ul { color: var(--ink); }
+.panel.feature li::before { background: var(--ink); }
+.big-stat { display: flex; align-items: baseline; gap: 12px; border-block: 1px solid rgba(11,31,58,.2); padding-block: 12px; }
+.big-stat b { font-family: var(--serif); font-size: 3rem; line-height: 1; font-weight: 400; }
+.big-stat span { font-size: .92rem; line-height: 1.35; }
+.panel.next { background: transparent; border-style: dashed; }
+@media (min-width: 900px) {
+  .journey.is-horizontal { height: 100vh; padding-block: 96px 32px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .journey.is-horizontal .journey-head { margin-bottom: 28px; }
+  .journey.is-horizontal .journey-head h2 { font-size: clamp(2.6rem, 5vw, 4.4rem); }
+  .journey.is-horizontal .track { max-width: none; margin: 0; display: flex; gap: 22px; width: max-content; padding-left: var(--gutter); padding-right: 30vw; will-change: transform; }
+  .journey.is-horizontal .panel { width: clamp(380px, 34vw, 480px); flex: none; }
+  .journey.is-horizontal .track-wrap { width: 100%; }
+}
+
+/* ---------- Projet phare ---------- */
+.case { background: var(--stone-2); color: var(--ink); padding-block: 110px; }
+.case-grid { display: grid; gap: 40px; }
+@media (min-width: 980px) { .case-grid { grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: center; } }
+.case-photo { margin: 0; position: relative; }
+.case-photo img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px; }
+@media (max-width: 979px) { .case-photo img { aspect-ratio: 16/11; } }
+.case-photo figcaption { position: absolute; left: 14px; bottom: 12px; color: #fff; font-weight: 600; font-size: .9rem; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.case-over { color: var(--muted); font-weight: 600; margin-bottom: 14px; }
+.case .sec-title { font-size: clamp(2.4rem, 5.5vw, 4.6rem); }
+.case-lede { font-size: 1.15rem; max-width: 52ch; margin-top: 20px; }
+.case-cols { display: grid; gap: 32px; margin-top: 40px; border-top: 1px solid var(--rule-l); padding-top: 28px; }
+@media (min-width: 640px) { .case-cols { grid-template-columns: 1.2fr 1fr; } }
+.case-cols h3 { font-family: var(--sans); font-weight: 700; font-size: 1rem; margin-bottom: 12px; }
+.case-cols ul { display: grid; gap: 8px; }
+.case-cols li { padding-left: 18px; position: relative; }
+.case-cols li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1px; background: var(--ink); }
+.case-cols p { color: var(--muted); }
+.case-stat { margin-top: 24px; display: flex; align-items: baseline; gap: 10px; }
+.case-stat b { font-family: var(--serif); font-weight: 400; font-size: 3.4rem; line-height: 1; }
+.case-stat span { color: var(--muted); }
+
+/* Panneau photo dans le parcours */
+.photo-panel { padding: 0; border: 0; aspect-ratio: 4/5; }
+.photo-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo-panel figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 22px 20px; font-size: .9rem; color: #fff; background: linear-gradient(transparent, rgba(5,14,28,.85)); }
+@media (min-width: 900px) { .journey.is-horizontal .photo-panel { width: clamp(300px, 26vw, 380px); aspect-ratio: auto; } }
+
+/* ---------- Derrière l'objectif (galerie photo) ---------- */
+.lens { padding-block: 110px; }
+.offwork { display: grid; gap: 18px; margin-bottom: 88px; padding-bottom: 48px; border-bottom: 1px solid var(--rule-d); }
+@media (min-width: 980px) { .offwork { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 64px; } }
+.offwork p { color: var(--sage); max-width: 44ch; }
+.sub-title { font-size: clamp(2.2rem, 5vw, 4rem); line-height: .95; letter-spacing: -.02em; font-variation-settings: "opsz" 144, "SOFT" 30; }
+.lens-top { display: grid; gap: 40px; align-items: end; }
+@media (min-width: 980px) { .lens-top { grid-template-columns: 1fr 1.25fr; gap: 64px; } }
+.lens-top p { color: var(--sage); max-width: 44ch; margin-top: 20px; }
+.lens-top figure { margin: 0; }
+.lens-top figure img { display: block; width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; }
+.lens-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--rule-d); font-weight: 600; font-size: .92rem; transition: background .2s, color .2s; }
+.pill:hover { background: #fff; color: var(--ink); }
+.strip-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-top: 72px; margin-bottom: 18px; }
+.strip-head span { color: var(--sage); font-size: .92rem; }
+.strip-nav { display: flex; gap: 8px; }
+.strip-nav button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--rule-d); background: transparent; color: #fff; font-size: 1.1rem; cursor: pointer; }
+.strip-nav button:hover { background: #fff; color: var(--ink); }
+.strip { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; cursor: grab; }
+.strip::-webkit-scrollbar { display: none; }
+.strip figure { margin: 0; flex: none; width: min(82vw, 560px); scroll-snap-align: start; position: relative; }
+.strip figure.tall { width: min(62vw, 320px); }
+.strip img { display: block; width: 100%; height: clamp(260px, 42vw, 380px); object-fit: cover; border-radius: 4px; pointer-events: none; user-select: none; }
+.strip figcaption { margin-top: 10px; font-size: .85rem; color: var(--sage); }
+
+/* ---------- Carnet de route ---------- */
+.trips { padding-block: 110px; }
+.trips-head { display: grid; gap: 22px; }
+@media (min-width: 980px) { .trips-head { grid-template-columns: 1fr 1fr; align-items: end; gap: 64px; } }
+.trips-head p { color: var(--muted); max-width: 44ch; }
+.countries { display: flex; flex-wrap: wrap; gap: 4px 0; margin-top: 48px; font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 3.8rem); line-height: 1.12; letter-spacing: -.02em; font-variation-settings: "opsz" 144, "SOFT" 40; }
+.countries li { transition: color .25s; }
+.countries li:not(:last-child)::after { content: "/"; color: var(--sky); padding: 0 .3em; font-weight: 300; }
+.countries li:hover { color: #3A5A86; font-style: italic; }
+.countries .home { font-style: italic; color: var(--muted); }
+.mosaic { display: grid; gap: 12px; margin-top: 56px; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+@media (min-width: 900px) { .mosaic { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; } }
+.mosaic figure { margin: 0; position: relative; overflow: hidden; border-radius: 4px; }
+.mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.mosaic figure:hover img { transform: scale(1.05); }
+.mosaic figcaption { position: absolute; left: 12px; bottom: 10px; font-size: .9rem; font-weight: 600; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.mosaic { grid-auto-flow: dense; }
+.mosaic figure { transition: opacity .35s; }
+.mosaic.filtering figure:not(.on) { opacity: .18; }
+.countries li[data-c] { cursor: pointer; }
+.countries li.on { color: #3A5A86; font-style: italic; }
+.m-tall { grid-row: span 2; }
+.m-wide { grid-column: span 2; }
+
+/* ---------- Formation & recherche ---------- */
+.study { padding-block: 110px; }
+.study-grid { display: grid; gap: 48px; margin-top: 56px; }
+@media (min-width: 980px) { .study-grid { grid-template-columns: 1.3fr 1fr; gap: 72px; } }
+.thesis { display: grid; gap: 22px; }
+.thesis blockquote {
+  margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.8vw, 2.25rem); line-height: 1.22;
+  font-variation-settings: "opsz" 96, "SOFT" 100; border-left: 2px solid var(--ink); padding-left: 24px;
+}
+.thesis p { color: var(--muted); max-width: 52ch; }
+.stamp { display: inline-flex; align-items: center; gap: 16px; padding: 14px 20px 14px 14px; border-radius: 999px; background: var(--ink); color: var(--stone); align-self: start; }
+.stamp b { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: var(--ink); display: grid; place-items: center; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; }
+.stamp span { font-size: .92rem; line-height: 1.3; }
+.degrees { display: grid; border-top: 1px solid var(--rule-l); }
+.degree { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding-block: 22px; border-bottom: 1px solid var(--rule-l); }
+.degree .y { font-weight: 700; font-size: .9rem; font-variant-numeric: tabular-nums; color: var(--muted); padding-top: 4px; }
+.degree h3 { font-size: 1.35rem; line-height: 1.2; font-variation-settings: "opsz" 40; }
+.degree p { color: var(--muted); font-size: .95rem; margin-top: 4px; }
+.degree .badge { display: inline-block; margin-top: 8px; font-size: .78rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--ink); color: #fff; }
+
+/* ---------- Compétences (bento) ---------- */
+.skills { padding-block: 110px; background: var(--stone-2); }
+.bento { display: grid; gap: 14px; margin-top: 56px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .bento { grid-template-columns: repeat(6, 1fr); } }
+.tile {
+  --x: 50%; --y: 50%;
+  position: relative; overflow: hidden; border-radius: 22px; padding: 26px; min-width: 0;
+  background: var(--stone); color: var(--ink); display: flex; flex-direction: column; gap: 14px;
+  isolation: isolate;
+}
+.tile::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(360px circle at var(--x) var(--y), rgba(11,31,58,.10), transparent 60%);
+}
+.tile:hover::before { opacity: 1; }
+.tile h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1; font-variation-settings: "opsz" 144, "SOFT" 50; }
+.tile h3 em { font-style: italic; }
+.tile p { color: var(--muted); font-size: .97rem; max-width: 46ch; }
+.tile ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.tile li { font-size: .88rem; font-weight: 600; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--rule-l); background: rgba(255,255,255,.35); }
+.tile.dark { background: var(--night); color: var(--stone); }
+.tile.dark p { color: var(--sage); }
+.tile.dark li { border-color: var(--rule-d); background: rgba(255,255,255,.04); }
+.tile.dark::before { background: radial-gradient(360px circle at var(--x) var(--y), rgba(255,255,255,.12), transparent 60%); }
+.tile.yellow { background: #D6E2F2; }
+.tile.yellow p { color: var(--ink); }
+.tile .big { font-family: var(--serif); font-size: clamp(3.4rem, 6vw, 5rem); line-height: .9; font-variation-settings: "opsz" 144; }
+@media (min-width: 760px) {
+  .t-org { grid-column: span 4; grid-row: span 2; }
+  .t-com { grid-column: span 2; grid-row: span 2; }
+  .t-gest { grid-column: span 3; }
+  .t-pub { grid-column: span 3; }
+  .t-tools { grid-column: span 4; }
+  .t-lang { grid-column: span 2; }
+}
+
+/* ---------- Passions (liste à survoler) ---------- */
+.passions { padding-block: 110px; }
+.passions .sub-title { margin-bottom: 18px; }
+.passions .intro-p { color: var(--sage); max-width: 46ch; margin-bottom: 56px; }
+.plist { border-top: 1px solid var(--rule-d); }
+.prow {
+  display: grid; grid-template-columns: 1fr; gap: 6px 40px; padding-block: 28px; border-bottom: 1px solid var(--rule-d);
+  position: relative; cursor: default;
+}
+@media (min-width: 900px) { .prow { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+.prow h3 {
+  font-size: clamp(2rem, 5.2vw, 4.4rem); line-height: 1; letter-spacing: -.02em; font-variation-settings: "opsz" 144, "SOFT" 30;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), color .3s;
+}
+.prow h3 em { font-style: italic; font-weight: 300; }
+.prow p { color: var(--sage); max-width: 52ch; transition: color .3s; }
+.prow p a { color: var(--stone); text-decoration: underline; text-underline-offset: 3px; }
+.prow:hover h3 { transform: translateX(18px); color: var(--sky); }
+.prow:hover p { color: var(--stone); }
+.preview {
+  position: fixed; left: 0; top: 0; z-index: 40; width: 260px; height: 190px; pointer-events: none;
+  border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 20px 50px -20px rgba(0,0,0,.5); opacity: 0; transform: translate(-50%, -50%) scale(.6);
+  transition: opacity .3s, transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.preview.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.preview svg, .preview img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.pthumb { width: 100%; max-width: 360px; aspect-ratio: 16/10; object-fit: cover; border-radius: 4px; margin-top: 8px; display: block; }
+@media (hover: hover) and (pointer: fine) { .pthumb { display: none; } }
+@media not ((hover: hover) and (pointer: fine)) { .preview { display: none; } }
+
+/* ---------- Contact ---------- */
+.contact { background: #fff; color: var(--ink); border-top: 1px solid var(--rule-l); padding-block: 110px 40px; }
+.contact .kicker { display: block; margin-bottom: 22px; }
+.contact h2 { font-size: clamp(3.4rem, 13vw, 12rem); line-height: .88; letter-spacing: -.04em; font-variation-settings: "opsz" 144, "SOFT" 60; }
+.contact h2 em { font-style: italic; font-weight: 300; }
+.contact-grid { display: grid; gap: 40px; margin-top: 64px; }
+@media (min-width: 900px) { .contact-grid { grid-template-columns: 1.3fr 1fr; align-items: end; } }
+.contact-lede { font-size: 1.15rem; max-width: 40ch; }
+.city { margin: 28px 0 0; max-width: 520px; }
+.city img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: 50% 35%; border-radius: 4px; }
+.city figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
+.links { display: grid; border-top: 1px solid rgba(11,31,58,.3); }
+.link-row {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
+  padding-block: 18px; border-bottom: 1px solid rgba(11,31,58,.3);
+}
+.link-row small { font-size: .88rem; font-weight: 600; opacity: .7; display: block; }
+.link-row .v { font-family: var(--serif); font-size: clamp(1.25rem, 2.4vw, 1.7rem); overflow-wrap: anywhere; user-select: all; }
+.copy {
+  font: 700 .85rem var(--sans); padding: 10px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--ink); background: transparent; color: var(--ink); transition: background .2s, color .2s;
+}
+.copy:hover { background: var(--ink); color: #fff; }
+.foot { margin-top: 90px; display: flex; flex-wrap: wrap; gap: 10px 32px; justify-content: space-between; font-size: .88rem; font-weight: 600; }
+.foot .clock { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" data-scroll>Chloé Di Pasquale</a>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="#apropos" data-scroll>Profil</a>
+      <a href="#projet" data-scroll>Projet phare</a>
+      <a href="#parcours" data-scroll>Parcours</a>
+      <a href="#competences" data-scroll>Compétences</a>
+      <a href="#formation" data-scroll>Formation</a>
+      <a href="#hors-travail" data-scroll>Hors travail</a>
+      <a class="nav-cta" href="#contact" data-scroll>Contact</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="overlay">Menu</button>
+  </div>
+</header>
+<div class="overlay" id="overlay" hidden>
+  <button type="button" id="close">Fermer</button>
+  <a href="#apropos" data-scroll>Profil</a>
+  <a href="#projet" data-scroll>Projet phare</a>
+  <a href="#parcours" data-scroll>Parcours</a>
+  <a href="#competences" data-scroll>Compétences</a>
+  <a href="#formation" data-scroll>Formation</a>
+  <a href="#hors-travail" data-scroll>Hors travail</a>
+  <a href="#contact" data-scroll>Contact</a>
+</div>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-label="Présentation">
+  <div class="wrap hero-grid">
+    <div class="hero-meta">
+      <span><i class="dot" aria-hidden="true"></i>Disponible maintenant</span>
+      <span>Orléans, mobile partout en France</span>
+    </div>
+    <div class="name-block">
+      <h1 class="name">
+        <span class="line">Chloé</span>
+        <span class="line indent"><em>Di</em> Pasquale</span>
+      </h1>
+      <p class="role">Chargée de projet, communication et événementiel</p>
+    </div>
+    <figure class="hero-photo">
+      <!-- Portrait principal -->
+      <img src="img/portrait.jpg" width="933" height="1400" alt="Portrait de Chloé Di Pasquale en noir et blanc, chemise blanche">
+    </figure>
+    <div class="hero-bottom">
+      <p class="rotator">J'aime
+        <span class="slot" aria-live="off">
+          <span>mener un projet de A à Z.</span>
+        </span>
+      </p>
+      <div class="hero-row">
+        <p class="hero-lede">Diplômée d'un master en éthique animale, j'organise, je coordonne et je fais avancer les projets avec les gens.</p>
+        <div class="cta">
+          <a class="btn solid" href="#contact" data-scroll>Me contacter</a>
+          <a class="btn" href="#projet" data-scroll>Voir mon projet phare</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= À PROPOS ================= -->
+<section class="about light" id="apropos" aria-labelledby="about-t">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="statement" id="statement">Je m'appelle Chloé. J'ai grandi dans le Var, entre la mer, la montagne et les écuries. Dans l'entreprise familiale, j'ai appris la gestion et la relation client. En stage, j'ai appris à porter un événement de bout en bout. Avec mon mémoire, j'ai appris à défendre une idée. Ce que j'aime, c'est quand un projet tient debout, du premier devis jusqu'au dernier merci.</p>
+      </div>
+      <figure style="margin:0">
+        <div class="arch">
+          <img src="img/var-coucher.jpg" width="975" height="1300" loading="lazy" alt="Coucher de soleil sur la mer, dans le Var">
+        </div>
+        <figcaption class="arch-cap"><span>Var</span></figcaption>
+      </figure>
+    </div>
+    <div class="numbers">
+      <div><b>7 mois</b><span>en gestion de projet événementiel</span></div>
+      <div><b>8 étés</b><span>en gestion et relation client en entreprise</span></div>
+      <div><b>~400</b><span>engagés sur l'événement que j'ai coordonné</span></div>
+      <div><b>Bac+5</b><span>Master, mention Bien</span></div>
+    </div>
+    <div class="seek">
+      <h3>Ce que je recherche</h3>
+      <dl>
+        <div><dt>Poste</dt><dd>Un premier poste en CDI ou CDD : chargée de projet, communication ou événementiel.</dd></div>
+        <div><dt>Secteurs</dt><dd>Événementiel, musique, sport et monde équestre, et toute structure où l'organisation et le contact humain comptent.</dd></div>
+        <div><dt>Disponibilité</dt><dd>Immédiate. Basée à Orléans, prête à m'installer en Île-de-France ou ailleurs en France.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJET PHARE ================= -->
+<section class="case" id="projet" aria-labelledby="case-t">
+  <div class="wrap">
+    <div class="case-grid">
+      <figure class="case-photo">
+        <img src="img/coulisses-concours.jpg" width="900" height="1200" loading="lazy" alt="Tentes blanches d'un concours hippique au coucher du soleil">
+        <figcaption>Fontainebleau</figcaption>
+      </figure>
+      <div class="case-body">
+        <p class="case-over">Projet phare, stage à l'ANPFS en 2026</p>
+        <h2 class="sec-title" id="case-t">National Poney Français de Selle</h2>
+        <p class="case-lede">Le grand rendez-vous de la race, organisé lors du Sologn'Pony. J'en ai coordonné l'organisation pendant mon stage.</p>
+        <div class="case-cols">
+          <div>
+            <h3>Ce que j'ai géré</h3>
+            <ul>
+              <li>Logements et repas</li>
+              <li>Trophées : devis et commande</li>
+              <li>Bénévoles</li>
+              <li>Communication</li>
+              <li>Système de vote</li>
+              <li>Remises de prix : préparation et distribution des lots</li>
+              <li>Imprévus sur place</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Et ensuite</h3>
+            <p>J'ai organisé presque seule le testage des étalons au Pôle du Cheval et de l'Âne.</p>
+            <div class="case-stat"><b>~400</b><span>engagés</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARCOURS ================= -->
+<section class="journey" id="parcours" aria-labelledby="journey-t">
+  <div class="wrap journey-head">
+    <h2 id="journey-t">Le parcours</h2>
+    <p>Du bureau à l'écurie, de l'entreprise familiale à l'association nationale. Faites défiler.</p>
+  </div>
+  <div class="track-wrap">
+    <div class="track wrap" id="track">
+
+      <article class="panel feature">
+        <span class="type">Stage de 7 mois</span>
+        <div class="year">2026</div>
+        <div>
+          <h3>Chargée de projet événementiel</h3>
+          <p class="org">ANPFS · Lamotte-Beuvron (41)</p>
+        </div>
+        <ul>
+          <li>Coordination du National Poney Français de Selle et du testage des étalons (voir le projet phare)</li>
+          <li>Emailing sous Mailjet pour la vente d'espaces publicitaires du magazine</li>
+          <li>Articles, bulletins d'information et mises à jour du site (WordPress)</li>
+          <li>Analyse de données sous Excel, boutique en ligne, fichier des adhérents</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <span class="type">Stage et bénévolat</span>
+        <div class="year">2018–26</div>
+        <div>
+          <h3>Gestion d'écurie et animation</h3>
+          <p class="org">Écuries Saint-Dominique · Le Beausset (83)</p>
+        </div>
+        <ul>
+          <li>Stage en gestion d'écurie et animation (févr. → mars 2026)</li>
+          <li>Bénévole chaque été de 2018 à 2023 : accueil des clients, soins des chevaux</li>
+          <li>Encadrement de jeunes cavaliers de 3 à 10 ans</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <span class="type">8 saisons</span>
+        <div class="year">2018–25</div>
+        <div>
+          <h3>Assistante administrative et commerciale</h3>
+          <p class="org">Di Pasquale Climatisation automobile · Six-Fours (83)</p>
+        </div>
+        <ul>
+          <li>Devis et facturation sous Excel, relances de paiement, assistanat de direction</li>
+          <li>Accueil des clients, planning des interventions, prise de rendez-vous</li>
+          <li>Gestion du stock, commandes de pièces, relation fournisseurs</li>
+          <li>Réseaux sociaux, site web, réponses aux avis Google</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <span class="type">Saisons</span>
+        <div class="year">2025</div>
+        <div>
+          <h3>Cavalière soigneuse, encadrement de groupes</h3>
+          <p class="org">Équitation Chavetourte (07) · Ranch CLG, Corse</p>
+        </div>
+        <ul>
+          <li>Assistante d'accompagnatrice de tourisme équestre, clientèle majoritairement anglophone</li>
+          <li>Encadrement de groupes de vacanciers en Corse</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <span class="type">Stage à distance</span>
+        <div class="year">2025</div>
+        <div>
+          <h3>Communication et prévention</h3>
+          <p class="org">Association Jump'Éthique</p>
+        </div>
+        <ul>
+          <li>Communication et prévention autour du bien-être animal</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <span class="type">Associatif</span>
+        <div class="year">2020–22</div>
+        <div>
+          <h3>Secrétaire générale, responsable des animations</h3>
+          <p class="org">Bureau des étudiants · Aix-Marseille Université</p>
+        </div>
+        <ul>
+          <li>Organisation des événements et animations étudiantes</li>
+          <li>Membre du conseil d'administration</li>
+        </ul>
+      </article>
+
+      <article class="panel next">
+        <span class="type">Prochainement</span>
+        <div class="year">Et après ?</div>
+        <div>
+          <h3>Votre équipe, peut-être.</h3>
+          <p class="org">Bénévole à Fulgurances Électroniques, Orléans, fin novembre 2026</p>
+        </div>
+        <ul>
+          <li><a href="#contact" data-scroll style="text-decoration:underline;text-underline-offset:3px">Me contacter</a></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMATION & RECHERCHE ================= -->
+<section class="study light" id="formation" aria-labelledby="study-t">
+  <div class="wrap">
+    <h2 class="sec-title" id="study-t">Penser le bien-être</h2>
+    <div class="study-grid">
+      <div class="thesis">
+        <blockquote>« Compétition équestre : entre performance et bien-être équin, un écart structurel. »</blockquote>
+        <p>Mon mémoire de master propose une évaluation éthique et scientifique des pratiques équestres de haut niveau. Je présenterai mes travaux de mémoire à la Journée de recherche équine organisée par Agroscope, le 27 janvier 2027, sous forme de poster.</p>
+        <div class="stamp"><b>27</b><span>janvier 2027<br>Journée de recherche équine, Agroscope (Suisse)</span></div>
+      </div>
+      <div class="degrees">
+        <div class="degree">
+          <span class="y">2024–26</span>
+          <div>
+            <h3>Master Sciences sociales, parcours Éthique animale</h3>
+            <p>Université de Strasbourg</p>
+            <span class="badge">Mention Bien</span>
+          </div>
+        </div>
+        <div class="degree">
+          <span class="y">2020–24</span>
+          <div>
+            <h3>Licence Sciences de la vie</h3>
+            <p>Aix-Marseille Université, puis Université de Bourgogne (Dijon)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPÉTENCES ================= -->
+<section class="skills" id="competences" aria-labelledby="skills-t" style="color:var(--ink)">
+  <div class="wrap">
+    <h2 class="sec-title" id="skills-t">Ce que je sais faire</h2>
+    <div class="bento">
+      <article class="tile dark t-org">
+        <h3>Organiser &amp; coordonner</h3>
+        <p>Préparer, prévoir le plan B, tenir le planning et gérer ce qui n'était pas prévu le jour même.</p>
+        <ul><li>Gestion de projet</li><li>Coordination logistique</li><li>Suivi sur site</li><li>Prestataires et partenaires</li><li>Bénévoles</li><li>Gestion des imprévus</li></ul>
+      </article>
+      <article class="tile yellow t-com">
+        <h3>Communiquer</h3>
+        <p>Écrire, publier, envoyer, montrer.</p>
+        <ul><li>Rédaction web</li><li>Emailing</li><li>Réseaux sociaux</li><li>Sites WordPress</li><li>Graphisme</li><li>Photo et vidéo</li></ul>
+      </article>
+      <article class="tile t-gest">
+        <h3>Gérer &amp; administrer</h3>
+        <ul><li>Devis et facturation</li><li>Relances</li><li>Stock et commandes</li><li>Analyse de données</li><li>Fichiers adhérents</li><li>Boutique en ligne</li></ul>
+      </article>
+      <article class="tile t-pub">
+        <h3>Accompagner</h3>
+        <ul><li>Accueil de la clientèle</li><li>Relation fournisseurs</li><li>Encadrement de groupes</li><li>Enfants de 3 à 10 ans</li></ul>
+      </article>
+      <article class="tile t-tools">
+        <h3>Outils</h3>
+        <ul><li>Excel</li><li>Pack Office</li><li>WordPress</li><li>Mailjet</li><li>Canva</li><li>Suite Adobe</li><li>CapCut</li><li>IA (productivité)</li></ul>
+      </article>
+      <article class="tile dark t-lang">
+        <span class="big">B2</span>
+        <p>Anglais · Permis B · prête à déménager</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DERRIÈRE L'OBJECTIF ================= -->
+<section class="lens" id="hors-travail" aria-labelledby="off-t">
+  <div class="wrap">
+    <div class="offwork">
+      <h2 class="sec-title" id="off-t">En dehors du travail</h2>
+      <p>La photo, les voyages, le sport et la musique. Ce qui me ressource et nourrit ma façon de travailler.</p>
+    </div>
+    <div class="lens-top">
+      <div>
+        <h3 class="sub-title" id="lens-t">Derrière l'objectif</h3>
+        <p>Je photographie surtout les concours de saut d'obstacles, et je filme les événements. Saisir le bon moment, c'est aussi savoir où se placer et anticiper ce qui va se passer.</p>
+        <div class="lens-links">
+          <a class="pill" href="https://www.instagram.com/cdi_pix/" target="_blank" rel="noopener">@cdi_pix ↗</a>
+        </div>
+      </div>
+      <figure>
+        <img src="img/photographe.jpg" width="1600" height="1066" loading="lazy" alt="Chloé regardant l'écran de son appareil photo, en noir et blanc">
+      </figure>
+    </div>
+
+    <div class="strip-head">
+      <span>Concours de saut d'obstacles</span>
+      <div class="strip-nav">
+        <button type="button" id="strip-prev" aria-label="Photo précédente">←</button>
+        <button type="button" id="strip-next" aria-label="Photo suivante">→</button>
+      </div>
+    </div>
+    <div class="strip" id="strip" tabindex="0" aria-label="Galerie de photos de concours">
+      <figure><img src="img/cso-gris.jpg" width="1600" height="1062" loading="lazy" alt="Cheval gris au saut d'un obstacle jaune, sous les pins"></figure>
+      <figure><img src="img/cso-cavaliere.jpg" width="1600" height="1062" loading="lazy" alt="Cavalière sur un cheval bai franchissant un obstacle"></figure>
+      <figure class="tall"><img src="img/detente.jpg" width="825" height="1100" loading="lazy" alt="Cavalier au pas sur un poney alezan dans la carrière de détente"></figure>
+      <figure><img src="img/cso-bai.jpg" width="1600" height="1062" loading="lazy" alt="Cavalier sur un cheval bai au-dessus de barres rouges et noires"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARNET DE ROUTE ================= -->
+<section class="trips light" id="voyages" aria-labelledby="trips-t">
+  <div class="wrap">
+    <div class="trips-head">
+      <div>
+        <h3 class="sub-title" id="trips-t">Carnet de route</h3>
+      </div>
+      <p>Préparer un itinéraire, partir, s'adapter quand le plan change. Et toujours revenir vers la mer du Var et les sommets. Survolez un pays pour voir ses photos.</p>
+    </div>
+    <ul class="countries" aria-label="Pays visités">
+      <li data-c="italie" tabindex="0">Italie</li><li data-c="croatie" tabindex="0">Croatie</li><li data-c="bosnie" tabindex="0">Bosnie</li><li>Espagne</li><li>Luxembourg</li><li>Belgique</li><li>Allemagne</li><li class="home" data-c="france" tabindex="0">et la France</li>
+    </ul>
+    <div class="mosaic" id="mosaic">
+      <figure class="m-tall" data-c="croatie"><img src="img/dubrovnik-port.jpg" width="900" height="1200" loading="lazy" alt="Le vieux port de Dubrovnik et ses remparts"><figcaption>Dubrovnik, Croatie</figcaption></figure>
+      <figure class="m-wide" data-c="croatie"><img src="img/cote-croate.jpg" width="900" height="1200" loading="lazy" alt="Eau turquoise et rochers sur la côte croate"><figcaption>Croatie</figcaption></figure>
+      <figure class="m-tall" data-c="bosnie"><img src="img/bosnie.jpg" width="900" height="1200" loading="lazy" alt="Dôme et minaret d'une mosquée au coucher du soleil"><figcaption>Bosnie</figcaption></figure>
+      <figure data-c="italie"><img src="img/tram-milan.jpg" width="800" height="1200" loading="lazy" alt="Ancien tramway orange au musée des sciences de Milan"><figcaption>Milan, Italie</figcaption></figure>
+      <figure data-c="italie"><img src="img/voilier-lac.jpg" width="800" height="1200" loading="lazy" alt="Voilier au mouillage sur un lac entouré de montagnes"><figcaption>Italie</figcaption></figure>
+      <figure class="m-tall" data-c="france"><img src="img/rade-toulon.jpg" width="975" height="1300" loading="lazy" alt="La rade de Toulon au crépuscule, vue d'en haut"><figcaption>Toulon</figcaption></figure>
+      <figure class="m-wide" data-c="france"><img src="img/montagne-neige.jpg" width="1600" height="900" loading="lazy" alt="Crêtes enneigées et falaises sous un ciel bleu"></figure>
+      <figure class="m-tall" data-c="italie"><img src="img/voilier-montagne.jpg" width="800" height="1200" loading="lazy" alt="Voilier glissant sur un lac au pied d'une montagne"><figcaption>Italie</figcaption></figure>
+      <figure data-c="croatie"><img src="img/dubrovnik-toits.jpg" width="900" height="1200" loading="lazy" alt="Toits de tuiles et clocher de Dubrovnik"><figcaption>Dubrovnik, Croatie</figcaption></figure>
+      <figure data-c="france"><img src="img/port-var.jpg" width="900" height="1200" loading="lazy" alt="Bateaux traditionnels illuminés dans un port du Var"><figcaption>Var</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PASSIONS ================= -->
+<section class="passions" id="passions" aria-labelledby="pass-t">
+  <div class="wrap">
+    <h3 class="sub-title" id="pass-t">Ce qui me fait vibrer</h3>
+    <p class="intro-p">Ce qui me donne de l'énergie, de l'endurance et le goût du collectif.</p>
+    <div class="plist">
+      <article class="prow" data-preview="music">
+        <h3>Musique &amp; festivals</h3>
+        <p>Techno et électro avant tout. Les festivals sont l'univers où j'aimerais aussi travailler.</p>
+      </article>
+      <article class="prow" data-img="img/escalade.jpg">
+        <div><h3>Le sport</h3><img class="pthumb" src="img/escalade.jpg" loading="lazy" alt=""></div>
+        <p>Équitation depuis l'âge de 5 ans, dix ans d'escalade, randonnée, via ferrata, canyoning, volley et kayak. La montagne depuis toute petite.</p>
+      </article>
+      <article class="prow" data-preview="f1">
+        <h3>Sports mécaniques</h3>
+        <p>La Formule 1 depuis toute jeune, en voisine du Circuit Paul Ricard.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact" aria-labelledby="contact-t">
+  <div class="wrap">
+    <h2 id="contact-t">Parlons de la suite.</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-lede">Un poste, une question ou un projet à me proposer ? Je réponds rapidement.</p>
+        <figure class="city">
+          <img src="img/orleans-cathedrale.jpg" width="900" height="1200" loading="lazy" alt="Rue Jeanne-d'Arc pavoisée et cathédrale Sainte-Croix d'Orléans">
+          <figcaption>Orléans</figcaption>
+        </figure>
+      </div>
+      <div class="links">
+        <div class="link-row">
+          <div><small>E-mail</small><span class="v">chloe.dipasquale83@gmail.com</span></div>
+          <button class="copy" type="button" data-copy="chloe.dipasquale83@gmail.com" data-cursor>Copier</button>
+        </div>
+        <div class="link-row">
+          <div><small>Téléphone</small><span class="v">07 81 83 29 57</span></div>
+          <button class="copy" type="button" data-copy="07 81 83 29 57" data-cursor>Copier</button>
+        </div>
+        <div class="link-row">
+          <div><small>LinkedIn</small><a class="v" href="https://www.linkedin.com/in/chlo%C3%A9-di-pasquale-24826a261" target="_blank" rel="noopener" data-cursor>Chloé Di Pasquale ↗</a></div>
+        </div>
+        <div class="link-row">
+          <div><small>Instagram</small><a class="v" href="https://www.instagram.com/chloe_dipasquale/" target="_blank" rel="noopener" data-cursor>@chloe_dipasquale ↗</a></div>
+        </div>
+        <div class="link-row">
+          <div><small>Instagram photo</small><a class="v" href="https://www.instagram.com/cdi_pix/" target="_blank" rel="noopener" data-cursor>@cdi_pix ↗</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© 2026 Chloé Di Pasquale</span>
+      <span>Orléans, <span class="clock" id="clock">--:--</span></span>
+      <a href="#top" data-scroll>Retour en haut ↑</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Aperçu flottant pour la liste des passions -->
+<div class="preview" id="preview" aria-hidden="true"></div>
+
+<!-- Bibliothèques : défilement fluide et animations au scroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+
+
+  /* ---------- Défilement fluide ---------- */
+  let lenis = null;
+  if (!reduce && typeof window.Lenis !== 'undefined') {
+    lenis = new Lenis({ lerp: 0.1 });
+    if (hasGsap) {
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(t => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+  }
+  const overlay = document.getElementById('overlay');
+  const burger = document.getElementById('burger');
+  function closeMenu() { overlay.hidden = true; burger.setAttribute('aria-expanded', 'false'); }
+  burger.addEventListener('click', () => { overlay.hidden = false; burger.setAttribute('aria-expanded', 'true'); });
+  document.getElementById('close').addEventListener('click', closeMenu);
+  document.querySelectorAll('[data-scroll]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href'); const el = document.querySelector(id);
+    if (!el) return; e.preventDefault(); closeMenu();
+    if (lenis) lenis.scrollTo(el, { offset: id === '#top' ? 0 : -10 });
+    else el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  }));
+
+  /* ---------- Rotation de la phrase du hero ---------- */
+  const slot = document.querySelector('.rotator .slot');
+  const phrases = ['mener un projet de A à Z.', 'quand tout tombe juste.', 'travailler avec les gens.', 'écrire et communiquer.', 'le terrain et le concret.'];
+  if (!reduce) {
+    let k = 0;
+    setInterval(() => {
+      const cur = slot.querySelector('span');
+      const next = document.createElement('span'); k = (k + 1) % phrases.length;
+      next.textContent = phrases[k]; next.className = 'in-wait'; slot.appendChild(next);
+      requestAnimationFrame(() => requestAnimationFrame(() => { cur.classList.add('out'); next.classList.remove('in-wait'); }));
+      setTimeout(() => cur.remove(), 650);
+    }, 2600);
+  }
+
+
+  /* ---------- Barre de progression ---------- */
+  const bar = document.getElementById('progress');
+  function prog() { const h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`; }
+  addEventListener('scroll', prog, { passive: true }); prog();
+
+  /* ---------- Texte qui se révèle au défilement ---------- */
+  const st = document.getElementById('statement');
+  if (hasGsap && !reduce) {
+    gsap.registerPlugin(ScrollTrigger);
+    // découpe en mots, en gardant l'italique
+    const walk = node => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(part => {
+            if (!part.trim()) { frag.appendChild(document.createTextNode(part)); return; }
+            const s = document.createElement('span'); s.className = 'w'; s.textContent = part; frag.appendChild(s);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    };
+    walk(st);
+    gsap.fromTo(st.querySelectorAll('.w'), { opacity: .32 }, {
+      opacity: 1, stagger: .05, ease: 'none',
+      scrollTrigger: { trigger: st, start: 'top 80%', end: 'bottom 45%', scrub: true }
+    });
+
+    /* Parcours horizontal (grand écran) */
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 900px)', () => {
+      const sec = document.getElementById('parcours');
+      const track = document.getElementById('track');
+      sec.classList.add('is-horizontal');
+      const dist = () => track.scrollWidth - innerWidth + 40;
+      const tw = gsap.to(track, {
+        x: () => -dist(), ease: 'none',
+        scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true }
+      });
+      return () => { sec.classList.remove('is-horizontal'); tw.scrollTrigger && tw.scrollTrigger.kill(); gsap.set(track, { clearProps: 'transform' }); };
+    });
+
+    /* Léger zoom sur l'illustration de l'arche */
+    gsap.fromTo('.arch img', { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.arch', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+    addEventListener('load', () => ScrollTrigger.refresh());
+    document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+  }
+
+  /* ---------- Lumière qui suit la souris sur les tuiles ---------- */
+  document.querySelectorAll('.tile').forEach(t => t.addEventListener('pointermove', e => {
+    const r = t.getBoundingClientRect();
+    t.style.setProperty('--x', (e.clientX - r.left) + 'px');
+    t.style.setProperty('--y', (e.clientY - r.top) + 'px');
+  }));
+
+  /* ---------- Aperçu flottant des passions ---------- */
+  const ART = {
+    music: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/>${Array.from({length:18},(_,i)=>{const h=[40,90,60,130,80,150,110,70,140,95,120,60,100,145,75,115,55,85][i];return `<rect x="${14+i*13.2}" y="${170-h}" width="8" height="${h}" rx="2" fill="#0B1F3A"/>`}).join('')}</svg>`,
+    photo: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/><rect x="60" y="55" width="140" height="95" rx="12" fill="none" stroke="#0B1F3A" stroke-width="5"/><rect x="88" y="40" width="40" height="18" rx="4" fill="#0B1F3A"/><circle cx="130" cy="102" r="30" fill="none" stroke="#0B1F3A" stroke-width="5"/><circle cx="130" cy="102" r="12" fill="#0B1F3A"/><circle cx="182" cy="72" r="5" fill="#0B1F3A"/></svg>`,
+    travel: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/><path d="M40 140 C80 60 150 160 215 55" fill="none" stroke="#0B1F3A" stroke-width="4" stroke-dasharray="9 8"/><circle cx="40" cy="140" r="9" fill="#0B1F3A"/><path d="M215 35 a16 16 0 0 1 16 16 c0 14 -16 30 -16 30 s-16 -16 -16 -30 a16 16 0 0 1 16 -16z" fill="#0B1F3A"/><circle cx="215" cy="51" r="5" fill="#FFFFFF"/></svg>`,
+    horse: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/><path d="M130 40 a52 52 0 0 1 52 52 v48 h-20 v-48 a32 32 0 0 0 -64 0 v48 h-20 v-48 a52 52 0 0 1 52 -52z" fill="#0B1F3A"/>${[0,1,2,3,4,5].map(i=>{const a=Math.PI*(1-i/5);return `<circle cx="${130+42*Math.cos(a)}" cy="${92-42*Math.sin(a)}" r="4" fill="#FFFFFF"/>`}).join('')}</svg>`,
+    mountain: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/><path d="M10 170 L90 60 L130 115 L170 40 L250 170Z" fill="#0B1F3A"/><path d="M170 40 L188 66 L176 60 L166 72 L156 60Z" fill="#A9C1E2"/><path d="M170 40 V18 L190 24 L170 30" fill="#0B1F3A"/></svg>`,
+    water: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/><circle cx="80" cy="72" r="36" fill="none" stroke="#0B1F3A" stroke-width="5"/><path d="M48 58 C72 70 96 66 112 52 M56 100 C66 80 90 74 114 82 M80 36 C70 60 74 88 92 106" fill="none" stroke="#0B1F3A" stroke-width="4"/><path d="M120 150 C150 140 210 140 240 150 C210 160 150 160 120 150Z" fill="#0B1F3A"/><path d="M150 120 L215 178" stroke="#0B1F3A" stroke-width="5" stroke-linecap="round"/><path d="M20 172 C50 164 80 180 110 172 S170 164 240 174" fill="none" stroke="#A9C1E2" stroke-width="4"/></svg>`,
+    f1: `<svg viewBox="0 0 260 190"><rect width="260" height="190" fill="#FFFFFF"/>${Array.from({length:6},(_,r)=>Array.from({length:9},(_,c)=>((r+c)%2?`<rect x="${40+c*20}" y="${35+r*20}" width="20" height="20" fill="#0B1F3A"/>`:'')).join('')).join('')}<rect x="34" y="30" width="6" height="140" fill="#0B1F3A"/></svg>`
+  };
+  const pv = document.getElementById('preview');
+  if (fine && !reduce) {
+    let px = 0, py = 0, qx = 0, qy = 0, live = false;
+    document.querySelectorAll('.prow').forEach(row => {
+      row.addEventListener('pointerenter', () => { pv.innerHTML = row.dataset.img ? `<img src="${row.dataset.img}" alt="">` : (ART[row.dataset.preview] || ''); pv.classList.add('on'); live = true; });
+      row.addEventListener('pointerleave', () => { pv.classList.remove('on'); live = false; });
+    });
+    addEventListener('pointermove', e => { px = e.clientX + 150; py = e.clientY; });
+    (function loop() { qx += (px - qx) * .15; qy += (py - qy) * .15; pv.style.left = qx + 'px'; pv.style.top = qy + 'px'; requestAnimationFrame(loop); })();
+  }
+
+  /* ---------- Galerie : flèches et glisser à la souris ---------- */
+  const strip = document.getElementById('strip');
+  if (strip) {
+    const step = () => (strip.querySelector('figure')?.getBoundingClientRect().width || 400) + 14;
+    document.getElementById('strip-prev').addEventListener('click', () => strip.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' }));
+    document.getElementById('strip-next').addEventListener('click', () => strip.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }));
+    let down = false, sx = 0, sl = 0;
+    strip.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; sx = e.clientX; sl = strip.scrollLeft; strip.style.scrollSnapType = 'none'; strip.style.cursor = 'grabbing'; });
+    addEventListener('pointerup', () => { if (!down) return; down = false; strip.style.scrollSnapType = ''; strip.style.cursor = ''; });
+    addEventListener('pointermove', e => { if (down) strip.scrollLeft = sl - (e.clientX - sx); });
+  }
+
+  /* ---------- Pays -> photos ---------- */
+  const mosaic = document.getElementById('mosaic');
+  document.querySelectorAll('.countries li[data-c]').forEach(li => {
+    const on = () => {
+      document.querySelectorAll('.countries li').forEach(x => x.classList.toggle('on', x === li));
+      mosaic.classList.add('filtering');
+      mosaic.querySelectorAll('figure').forEach(f => f.classList.toggle('on', f.dataset.c === li.dataset.c));
+    };
+    const off = () => { li.classList.remove('on'); mosaic.classList.remove('filtering'); };
+    li.addEventListener('pointerenter', on); li.addEventListener('pointerleave', off);
+    li.addEventListener('focus', on); li.addEventListener('blur', off);
+    li.addEventListener('click', on);
+  });
+
+  /* ---------- Copier ---------- */
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+    const done = () => { b.textContent = 'Copié'; setTimeout(() => (b.textContent = 'Copier'), 1600); };
+    const fallback = () => {
+      const v = b.parentElement.querySelector('.v'); const r = document.createRange(); r.selectNodeContents(v);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Sélectionné';
+    };
+    try { navigator.clipboard.writeText(b.dataset.copy).then(done, fallback); } catch (e) { fallback(); }
+  }));
+
+  /* ---------- Horloge d'Orléans ---------- */
+  const clock = document.getElementById('clock');
+  const fmt = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' });
+  const tick = () => { clock.textContent = fmt.format(new Date()); };
+  tick(); setInterval(tick, 15000);
+})();
+</script>
+
+</body>
+</html>
